@@ -1,0 +1,29 @@
+uuid: e1c24305-2114-481c-ab43-3fb7ac3127e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_collection
+    - node.type.item
+    - taxonomy.vocabulary.collection
+id: node.item.field_collection
+field_name: field_collection
+entity_type: node
+bundle: item
+label: Collection
+description: 'The collection to which the item belongs, ex: “Grayson Collection”, “University of Minnesota Collection”'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      collection: collection
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

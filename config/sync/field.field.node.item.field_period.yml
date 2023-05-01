@@ -1,0 +1,19 @@
+uuid: f431a72d-d86d-4d66-b14b-6a7d31a6d55b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_period
+    - node.type.item
+id: node.item.field_period
+field_name: field_period
+entity_type: node
+bundle: item
+label: Period
+description: 'The period from which the item originates, ex: “late 17th to early 18th century CE”, “1285 BCE”'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,29 @@
+uuid: 28512e6e-6ec4-42b9-a735-6e4ae04c9111
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_country_of_origin
+    - node.type.item
+    - taxonomy.vocabulary.country_of_origin
+id: node.item.field_country_of_origin
+field_name: field_country_of_origin
+entity_type: node
+bundle: item
+label: 'Country of origin'
+description: 'The item’s country of origin.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    target_bundles:
+      country_of_origin: country_of_origin
+    sort:
+      field: name
+      direction: asc
+    auto_create: 1
+    auto_create_bundle: ''
+field_type: entity_reference

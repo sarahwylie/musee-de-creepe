@@ -1,0 +1,30 @@
+uuid: b65fef88-3afe-48b0-be6f-de79eddf646f
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_acquisition_type
+field_name: field_acquisition_type
+entity_type: taxonomy_term
+type: list_float
+settings:
+  allowed_values:
+    -
+      value: 0.0
+      label: Purchase
+    -
+      value: 1.0
+      label: Donation
+    -
+      value: 2.0
+      label: Loan
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

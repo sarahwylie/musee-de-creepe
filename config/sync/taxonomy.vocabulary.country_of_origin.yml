@@ -1,0 +1,8 @@
+uuid: ebd15ffc-59f6-4f82-a87e-b3742826da9d
+langcode: en
+status: true
+dependencies: {  }
+name: 'Country of origin'
+vid: country_of_origin
+description: 'The country from which the item originated.'
+weight: 0

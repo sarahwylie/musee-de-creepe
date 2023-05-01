@@ -1,0 +1,23 @@
+uuid: df14fd98-bea1-427e-81e4-b9c9f1b7b7bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_year_acquired
+    - taxonomy.vocabulary.collection
+id: taxonomy_term.collection.field_year_acquired
+field_name: field_year_acquired
+entity_type: taxonomy_term
+bundle: collection
+label: 'Year acquired'
+description: 'The year the collection was acquired.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: 2024
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,23 @@
+uuid: 03d5cbd9-f724-4c56-98a9-a5118650a553
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_acquisition_type
+    - taxonomy.vocabulary.collection
+  module:
+    - options
+id: taxonomy_term.collection.field_acquisition_type
+field_name: field_acquisition_type
+entity_type: taxonomy_term
+bundle: collection
+label: 'Acquisition type'
+description: 'Was this purchased, donated, or loaned for display?'
+required: false
+translatable: false
+default_value:
+  -
+    value: '2'
+default_value_callback: ''
+settings: {  }
+field_type: list_float

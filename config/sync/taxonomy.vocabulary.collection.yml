@@ -1,0 +1,8 @@
+uuid: b00b0851-2749-4806-bd52-38859f6d540b
+langcode: en
+status: true
+dependencies: {  }
+name: Collection
+vid: collection
+description: 'A single collection maintained by the museum'
+weight: 0
