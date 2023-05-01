@@ -1,9 +1,74 @@
 uuid: d6cc044f-7f78-4662-9d43-8012d38b066c
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.article
+    - node.type.item
+    - node.type.page
+  module:
+    - block
+    - block_content
+    - comment
+    - contact
+    - field_ui
+    - file
+    - image
+    - node
+    - shortcut
+    - system
+    - taxonomy
+    - toolbar
+    - update
 id: webmaster
 label: Webmaster
 weight: 4
 is_admin: false
-permissions: {  }
+permissions:
+  - 'access content overview'
+  - 'access files overview'
+  - 'access site in maintenance mode'
+  - 'access toolbar'
+  - 'administer block_content display'
+  - 'administer block_content form display'
+  - 'administer blocks'
+  - 'administer comment display'
+  - 'administer comment form display'
+  - 'administer contact_message display'
+  - 'administer contact_message form display'
+  - 'administer display modes'
+  - 'administer image styles'
+  - 'administer menu'
+  - 'administer modules'
+  - 'administer node display'
+  - 'administer node form display'
+  - 'administer shortcuts'
+  - 'administer taxonomy_term display'
+  - 'administer taxonomy_term form display'
+  - 'administer user display'
+  - 'administer user form display'
+  - 'create article content'
+  - 'create item content'
+  - 'create page content'
+  - 'delete any article content'
+  - 'delete any item content'
+  - 'delete any page content'
+  - 'delete article revisions'
+  - 'delete item revisions'
+  - 'delete own article content'
+  - 'delete own item content'
+  - 'delete own page content'
+  - 'delete page revisions'
+  - 'edit any article content'
+  - 'edit any item content'
+  - 'edit any page content'
+  - 'edit own item content'
+  - 'revert all revisions'
+  - 'revert article revisions'
+  - 'revert item revisions'
+  - 'revert page revisions'
+  - 'view all revisions'
+  - 'view article revisions'
+  - 'view own unpublished content'
+  - 'view page revisions'
+  - 'view update notifications'

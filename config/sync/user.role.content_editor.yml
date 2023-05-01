@@ -3,13 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.article
-    - node.type.page
+    - node.type.item
+    - taxonomy.vocabulary.collection
+    - taxonomy.vocabulary.country_of_origin
     - taxonomy.vocabulary.tags
   module:
     - comment
     - contextual
     - file
+    - image
     - node
     - path
     - system
@@ -27,22 +29,31 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
+  - 'access taxonomy overview'
   - 'access toolbar'
   - 'access tour'
+  - 'administer image styles'
   - 'administer url aliases'
-  - 'create article content'
-  - 'create page content'
+  - 'create item content'
+  - 'create terms in collection'
+  - 'create terms in country_of_origin'
   - 'create terms in tags'
   - 'create url aliases'
-  - 'delete article revisions'
-  - 'delete own article content'
-  - 'delete own page content'
-  - 'delete page revisions'
-  - 'edit own article content'
+  - 'delete any item content'
+  - 'delete item revisions'
+  - 'delete own item content'
+  - 'delete terms in collection'
+  - 'delete terms in country_of_origin'
+  - 'delete terms in tags'
+  - 'edit any item content'
   - 'edit own comments'
-  - 'edit own page content'
+  - 'edit own item content'
+  - 'edit terms in collection'
+  - 'edit terms in country_of_origin'
   - 'edit terms in tags'
   - 'revert all revisions'
+  - 'revert item revisions'
   - 'view all revisions'
+  - 'view item revisions'
   - 'view own unpublished content'
   - 'view the administration theme'
