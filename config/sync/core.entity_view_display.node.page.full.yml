@@ -1,8 +1,9 @@
-uuid: 8f2059d0-7555-4477-8512-5dacd7877479
+uuid: 703b5af6-c9c3-485f-9651-09ee4f315902
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - field.field.node.page.body
     - field.field.node.page.field_picture
     - node.type.page
@@ -12,10 +13,10 @@ dependencies:
     - user
 _core:
   default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
-id: node.page.default
+id: node.page.full
 targetEntityType: node
 bundle: page
-mode: default
+mode: full
 content:
   body:
     type: text_default
@@ -26,7 +27,7 @@ content:
     region: content
   field_picture:
     type: image
-    label: hidden
+    label: above
     settings:
       image_link: ''
       image_style: ''
@@ -36,8 +37,6 @@ content:
     weight: 102
     region: content
   links:
-    settings: {  }
-    third_party_settings: {  }
     weight: 101
     region: content
 hidden: {  }

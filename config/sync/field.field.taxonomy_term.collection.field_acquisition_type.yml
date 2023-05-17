@@ -13,7 +13,7 @@ entity_type: taxonomy_term
 bundle: collection
 label: 'Acquisition type'
 description: 'Was this purchased, donated, or loaned for display?'
-required: false
+required: true
 translatable: false
 default_value:
   -

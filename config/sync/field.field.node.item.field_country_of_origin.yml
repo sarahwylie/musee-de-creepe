@@ -6,6 +6,8 @@ dependencies:
     - field.storage.node.field_country_of_origin
     - node.type.item
     - taxonomy.vocabulary.country_of_origin
+  content:
+    - 'taxonomy_term:country_of_origin:69f594cb-37cb-44e0-8b17-c2accffa0790'
 id: node.item.field_country_of_origin
 field_name: field_country_of_origin
 entity_type: node
@@ -14,16 +16,18 @@ label: 'Country of origin'
 description: 'The item’s country of origin.'
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    target_uuid: 69f594cb-37cb-44e0-8b17-c2accffa0790
 default_value_callback: ''
 settings:
-  handler: views
+  handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
       country_of_origin: country_of_origin
     sort:
       field: name
       direction: asc
-    auto_create: 1
+    auto_create: true
     auto_create_bundle: ''
 field_type: entity_reference

@@ -8,7 +8,7 @@ third_party_settings:
   menu_ui:
     available_menus:
       - main
-    parent: 'main:'
+    parent: 'main:menu_link_content:ba7a54f8-362d-445e-a385-22a18b00b9c6'
 name: Item
 type: item
 description: 'Use item for any object, art, or artifact cataloged by the museum.'

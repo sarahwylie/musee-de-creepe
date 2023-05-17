@@ -1,0 +1,8 @@
+roles:
+  contributor:
+    path: /contributor
+    url: /user/register/contributor
+    redirect_path: /
+    hidden: 0
+    form_mode_register: contributor
+    form_mode_edit: default

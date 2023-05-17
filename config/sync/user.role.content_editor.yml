@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - node.type.item
+    - node.type.page
     - taxonomy.vocabulary.collection
     - taxonomy.vocabulary.country_of_origin
     - taxonomy.vocabulary.tags
@@ -35,25 +36,33 @@ permissions:
   - 'administer image styles'
   - 'administer url aliases'
   - 'create item content'
+  - 'create page content'
   - 'create terms in collection'
   - 'create terms in country_of_origin'
   - 'create terms in tags'
   - 'create url aliases'
   - 'delete any item content'
+  - 'delete any page content'
   - 'delete item revisions'
   - 'delete own item content'
+  - 'delete own page content'
+  - 'delete page revisions'
   - 'delete terms in collection'
   - 'delete terms in country_of_origin'
   - 'delete terms in tags'
   - 'edit any item content'
+  - 'edit any page content'
   - 'edit own comments'
   - 'edit own item content'
+  - 'edit own page content'
   - 'edit terms in collection'
   - 'edit terms in country_of_origin'
   - 'edit terms in tags'
   - 'revert all revisions'
   - 'revert item revisions'
+  - 'revert page revisions'
   - 'view all revisions'
   - 'view item revisions'
   - 'view own unpublished content'
+  - 'view page revisions'
   - 'view the administration theme'

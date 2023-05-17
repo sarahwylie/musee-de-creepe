@@ -11,9 +11,11 @@ entity_type: taxonomy_term
 bundle: collection
 label: 'Year acquired'
 description: 'The year the collection was acquired.'
-required: false
+required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: 2023
 default_value_callback: ''
 settings:
   min: null

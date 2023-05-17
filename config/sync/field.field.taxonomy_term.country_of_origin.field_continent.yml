@@ -1,0 +1,21 @@
+uuid: 7bf7ac01-90f6-4729-b9ba-574da1bca7ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_continent
+    - taxonomy.vocabulary.country_of_origin
+id: taxonomy_term.country_of_origin.field_continent
+field_name: field_continent
+entity_type: taxonomy_term
+bundle: country_of_origin
+label: Continent
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - node.type.item
+    - node.type.page
   module:
     - node
 id: contributor
@@ -12,3 +13,5 @@ weight: 5
 is_admin: null
 permissions:
   - 'create item content'
+  - 'create page content'
+  - 'view own unpublished content'

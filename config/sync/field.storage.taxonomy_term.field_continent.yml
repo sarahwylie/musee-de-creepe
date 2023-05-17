@@ -1,13 +1,12 @@
-uuid: 3aeea559-e62c-41ca-944e-0069438fd1e9
+uuid: 2f2be553-f8ab-434c-b5fe-58c00929b38b
 langcode: en
 status: true
 dependencies:
   module:
-    - node
     - taxonomy
-id: node.field_collection
-field_name: field_collection
-entity_type: node
+id: taxonomy_term.field_continent
+field_name: field_continent
+entity_type: taxonomy_term
 type: entity_reference
 settings:
   target_type: taxonomy_term

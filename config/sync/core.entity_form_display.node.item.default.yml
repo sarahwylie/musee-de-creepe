@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.item.body
-    - field.field.node.item.field_collection
     - field.field.node.item.field_country_of_origin
     - field.field.node.item.field_period
+    - field.field.node.item.field_photo
+    - image.style.thumbnail
     - node.type.item
   module:
+    - image
     - path
     - text
 id: node.item.default
@@ -32,18 +34,8 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_collection:
-    type: entity_reference_autocomplete
-    weight: 123
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_country_of_origin:
-    type: entity_reference_autocomplete
+    type: entity_reference_autocomplete_tags
     weight: 124
     region: content
     settings:
@@ -59,6 +51,14 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_photo:
+    type: image_image
+    weight: 125
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
   path:
     type: path

@@ -1,0 +1,22 @@
+uuid: 3a957270-c115-4f42-96a9-2e8074ad901e
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: collections
+label: Collections
+type: 'canonical_entities:taxonomy_term'
+pattern: '/[term:vocabulary:name]/[term:name]/'
+selection_criteria:
+  649e62f2-0956-43b3-ae16-bc457851a100:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 649e62f2-0956-43b3-ae16-bc457851a100
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      collection: collection
+selection_logic: and
+weight: -5
+relationships: {  }

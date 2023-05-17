@@ -1,0 +1,30 @@
+uuid: 67d1d2d7-566f-4baa-82dc-9d9ed4b6f03a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.country_of_origin.field_continent
+    - taxonomy.vocabulary.country_of_origin
+  module:
+    - text
+id: taxonomy_term.country_of_origin.default
+targetEntityType: taxonomy_term
+bundle: country_of_origin
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_continent:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

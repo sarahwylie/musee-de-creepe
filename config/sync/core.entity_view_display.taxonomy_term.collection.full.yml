@@ -1,18 +1,19 @@
-uuid: fdcdca42-3854-4b0d-874c-402042fe0a8a
+uuid: a4e0732d-216c-4c67-a13f-eccfb231be9c
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.taxonomy_term.full
     - field.field.taxonomy_term.collection.field_acquisition_type
     - field.field.taxonomy_term.collection.field_year_acquired
     - taxonomy.vocabulary.collection
   module:
     - options
     - text
-id: taxonomy_term.collection.default
+id: taxonomy_term.collection.full
 targetEntityType: taxonomy_term
 bundle: collection
-mode: default
+mode: full
 content:
   description:
     type: text_default
@@ -22,11 +23,11 @@ content:
     weight: 0
     region: content
   field_acquisition_type:
-    type: list_default
+    type: list_key
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 2
     region: content
   field_year_acquired:
     type: number_integer
@@ -35,6 +36,6 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
 hidden: {  }

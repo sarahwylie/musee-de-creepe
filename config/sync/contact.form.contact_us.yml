@@ -1,0 +1,12 @@
+uuid: 66f25728-f07b-46f7-84f6-194fc0a30d11
+langcode: en
+status: true
+dependencies: {  }
+id: contact_us
+label: 'Contact us'
+recipients:
+  - contact@museedecreepe.com
+reply: ''
+weight: 0
+message: 'Thanks for reaching out! If you left contact information then we will reach out to you as soon as we are able. Have a creepé day!'
+redirect: /
