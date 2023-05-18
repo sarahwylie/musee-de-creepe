@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.item.body
+    - field.field.node.item.field_collection
     - field.field.node.item.field_country_of_origin
     - field.field.node.item.field_period
     - field.field.node.item.field_photo
@@ -19,10 +20,18 @@ mode: default
 content:
   body:
     type: text_default
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_collection:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
     region: content
   field_country_of_origin:
     type: entity_reference_label
@@ -30,7 +39,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_period:
     type: string
@@ -38,7 +47,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_photo:
     type: image
@@ -49,7 +58,7 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 6
+    weight: 4
     region: content
 hidden:
   links: true

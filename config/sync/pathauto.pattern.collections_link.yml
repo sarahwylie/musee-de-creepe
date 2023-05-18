@@ -1,18 +1,18 @@
-uuid: 3a957270-c115-4f42-96a9-2e8074ad901e
+uuid: 8618a476-feac-4d32-8f36-f13a94bf1fe2
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - taxonomy
-id: collections
-label: Collections
+id: collections_link
+label: 'Collections link'
 type: 'canonical_entities:taxonomy_term'
-pattern: '/[term:vocabulary:name]/[term:name]/'
+pattern: '/collections/[term:name]/'
 selection_criteria:
-  649e62f2-0956-43b3-ae16-bc457851a100:
+  bf7b8747-5e6b-43bd-9c0d-0cec162a7a9f:
     id: 'entity_bundle:taxonomy_term'
     negate: false
-    uuid: 649e62f2-0956-43b3-ae16-bc457851a100
+    uuid: bf7b8747-5e6b-43bd-9c0d-0cec162a7a9f
     context_mapping:
       taxonomy_term: taxonomy_term
     bundles:

@@ -1,0 +1,29 @@
+uuid: 00ee8092-7f0d-4b93-a287-abfecbd9fd9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_collection
+    - node.type.item
+    - taxonomy.vocabulary.collection
+id: node.item.field_collection
+field_name: field_collection
+entity_type: node
+bundle: item
+label: Collection
+description: 'To which collection does this item belong?'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      collection: collection
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

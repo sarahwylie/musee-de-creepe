@@ -23,7 +23,7 @@ content:
     weight: 0
     region: content
   field_acquisition_type:
-    type: list_key
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }

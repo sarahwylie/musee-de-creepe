@@ -7,7 +7,6 @@ dependencies:
     - field.field.taxonomy_term.collection.field_year_acquired
     - taxonomy.vocabulary.collection
   module:
-    - options
     - text
 id: taxonomy_term.collection.default
 targetEntityType: taxonomy_term
@@ -15,26 +14,13 @@ bundle: collection
 mode: default
 content:
   description:
-    type: text_default
+    type: text_trimmed
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
-  field_acquisition_type:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
-  field_year_acquired:
-    type: number_integer
-    label: above
     settings:
-      thousand_separator: ''
-      prefix_suffix: true
+      trim_length: 50
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  field_acquisition_type: true
+  field_year_acquired: true
