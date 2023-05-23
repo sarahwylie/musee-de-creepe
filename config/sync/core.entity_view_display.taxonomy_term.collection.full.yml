@@ -5,11 +5,102 @@ dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.full
     - field.field.taxonomy_term.collection.field_acquisition_type
+    - field.field.taxonomy_term.collection.field_photo
     - field.field.taxonomy_term.collection.field_year_acquired
+    - image.style.thumbnail
     - taxonomy.vocabulary.collection
   module:
+    - image
+    - layout_builder
+    - layout_discovery
     - options
     - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Blurb
+          context_mapping: {  }
+        components:
+          8b997fe2-5a84-4fdf-b9ad-706490ffce25:
+            uuid: 8b997fe2-5a84-4fdf-b9ad-706490ffce25
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:collection:description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'Details / Photo'
+          context_mapping: {  }
+          column_widths: 50-50
+        components:
+          ff4ffa47-2e89-4fb0-b3b7-e9f67ecab5bb:
+            uuid: ff4ffa47-2e89-4fb0-b3b7-e9f67ecab5bb
+            region: second
+            configuration:
+              id: 'field_block:taxonomy_term:collection:field_photo'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: thumbnail
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          4c8a6276-03f3-448e-9566-eaea7ec3ffe1:
+            uuid: 4c8a6276-03f3-448e-9566-eaea7ec3ffe1
+            region: first
+            configuration:
+              id: 'field_block:taxonomy_term:collection:field_year_acquired'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: number_integer
+                label: above
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          68ffe258-05a7-4b92-b7b5-0bc560442150:
+            uuid: 68ffe258-05a7-4b92-b7b5-0bc560442150
+            region: first
+            configuration:
+              id: 'field_block:taxonomy_term:collection:field_acquisition_type'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: list_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
 id: taxonomy_term.collection.full
 targetEntityType: taxonomy_term
 bundle: collection
@@ -28,6 +119,17 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_photo:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
     region: content
   field_year_acquired:
     type: number_integer

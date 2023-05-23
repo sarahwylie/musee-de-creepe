@@ -4,9 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.collection.field_acquisition_type
+    - field.field.taxonomy_term.collection.field_photo
     - field.field.taxonomy_term.collection.field_year_acquired
+    - image.style.thumbnail
     - taxonomy.vocabulary.collection
   module:
+    - image
     - path
     - text
 id: taxonomy_term.collection.default
@@ -27,6 +30,14 @@ content:
     weight: 3
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_photo:
+    type: image_image
+    weight: 5
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
   field_year_acquired:
     type: number

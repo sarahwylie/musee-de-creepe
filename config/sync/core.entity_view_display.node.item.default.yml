@@ -11,8 +11,127 @@ dependencies:
     - node.type.item
   module:
     - image
+    - layout_builder
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'Body / Photo'
+          context_mapping: {  }
+          column_widths: 50-50
+        components:
+          c19837df-2257-4c8b-9af5-05b56ba8b8b5:
+            uuid: c19837df-2257-4c8b-9af5-05b56ba8b8b5
+            region: first
+            configuration:
+              id: 'field_block:node:item:body'
+              label: 'Body and photo'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: visually_hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          26010654-c484-4229-86a1-1354dc0e9a2b:
+            uuid: 26010654-c484-4229-86a1-1354dc0e9a2b
+            region: second
+            configuration:
+              id: 'field_block:node:item:field_photo'
+              label: Photo
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: visually_hidden
+                settings:
+                  image_link: content
+                  image_style: large
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_threecol_section
+        layout_settings:
+          label: 'Collection details'
+          context_mapping: {  }
+          column_widths: 33-34-33
+        components:
+          e952b107-209d-4d28-a333-2e2ecf5c250c:
+            uuid: e952b107-209d-4d28-a333-2e2ecf5c250c
+            region: first
+            configuration:
+              id: 'field_block:node:item:field_collection'
+              label: Collection
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          78ea8f0f-4b92-4761-94c3-cb2a9ea01485:
+            uuid: 78ea8f0f-4b92-4761-94c3-cb2a9ea01485
+            region: second
+            configuration:
+              id: 'field_block:node:item:field_period'
+              label: Period
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          8ba65984-31c7-4eb6-8dd0-214739aded56:
+            uuid: 8ba65984-31c7-4eb6-8dd0-214739aded56
+            region: third
+            configuration:
+              id: 'field_block:node:item:field_country_of_origin'
+              label: 'Country of origin'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
 id: node.item.default
 targetEntityType: node
 bundle: item
