@@ -36,7 +36,7 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: '/collections/*'
+    pages: '/collections/animals/*'
   'entity_bundle:taxonomy_term':
     id: 'entity_bundle:taxonomy_term'
     negate: false

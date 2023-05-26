@@ -1,0 +1,23 @@
+uuid: b23f8b9d-50b9-4968-b749-f96149375f41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_credit
+    - node.type.item
+  module:
+    - link
+id: node.item.field_credit
+field_name: field_credit
+entity_type: node
+bundle: item
+label: Credit
+description: 'Where is this work originally/permanently located?'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

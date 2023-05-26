@@ -1,0 +1,22 @@
+uuid: f9e50244-d7ed-46b0-8dbe-d1c61416a0a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: continent_and_country
+label: 'Continent and Country'
+type: 'canonical_entities:taxonomy_term'
+pattern: '/[term:field_continent]/[term:field_continent:entity]'
+selection_criteria:
+  681b2256-e72d-47b6-8ead-fd9056e2aeb8:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 681b2256-e72d-47b6-8ead-fd9056e2aeb8
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      country_of_origin: country_of_origin
+selection_logic: and
+weight: -5
+relationships: {  }

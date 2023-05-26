@@ -4,14 +4,18 @@ status: true
 dependencies:
   config:
     - field.field.node.item.body
+    - field.field.node.item.field_blurb
     - field.field.node.item.field_collection
     - field.field.node.item.field_country_of_origin
+    - field.field.node.item.field_credit
     - field.field.node.item.field_period
     - field.field.node.item.field_photo
     - node.type.item
   module:
     - image
     - layout_builder
+    - layout_discovery
+    - link
     - text
     - user
 third_party_settings:
@@ -22,30 +26,12 @@ third_party_settings:
       -
         layout_id: layout_twocol_section
         layout_settings:
-          label: 'Body / Photo'
+          label: 'Blurb / Photo'
           context_mapping: {  }
           column_widths: 50-50
         components:
-          c19837df-2257-4c8b-9af5-05b56ba8b8b5:
-            uuid: c19837df-2257-4c8b-9af5-05b56ba8b8b5
-            region: first
-            configuration:
-              id: 'field_block:node:item:body'
-              label: 'Body and photo'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: text_default
-                label: visually_hidden
-                settings: {  }
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          26010654-c484-4229-86a1-1354dc0e9a2b:
-            uuid: 26010654-c484-4229-86a1-1354dc0e9a2b
+          9ef6c23a-3e1b-4a75-8001-ccf840b8a199:
+            uuid: 9ef6c23a-3e1b-4a75-8001-ccf840b8a199
             region: second
             configuration:
               id: 'field_block:node:item:field_photo'
@@ -59,12 +45,30 @@ third_party_settings:
                 type: image
                 label: visually_hidden
                 settings:
-                  image_link: content
-                  image_style: large
+                  image_link: ''
+                  image_style: thumbnail
                   image_loading:
                     attribute: lazy
                 third_party_settings: {  }
             weight: 0
+            additional: {  }
+          7ce2cf41-03c2-49e2-ae59-0300fdf0e9a4:
+            uuid: 7ce2cf41-03c2-49e2-ae59-0300fdf0e9a4
+            region: first
+            configuration:
+              id: 'field_block:node:item:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: visually_hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
             additional: {  }
         third_party_settings: {  }
       -
@@ -132,6 +136,36 @@ third_party_settings:
             weight: 0
             additional: {  }
         third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Credit
+          context_mapping: {  }
+        components:
+          5af7d19f-a8f2-45e7-9147-ffcf81d5f489:
+            uuid: 5af7d19f-a8f2-45e7-9147-ffcf81d5f489
+            region: content
+            configuration:
+              id: 'field_block:node:item:field_credit'
+              label: Credit
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: link
+                label: above
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: _blank
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
 id: node.item.default
 targetEntityType: node
 bundle: item
@@ -144,6 +178,13 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_blurb:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: first
   field_collection:
     type: entity_reference_label
     label: above
@@ -160,6 +201,18 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
+  field_credit:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 5
+    region: first
   field_period:
     type: string
     label: above

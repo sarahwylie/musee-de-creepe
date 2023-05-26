@@ -5,8 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.item.body
+    - field.field.node.item.field_blurb
     - field.field.node.item.field_collection
     - field.field.node.item.field_country_of_origin
+    - field.field.node.item.field_credit
     - field.field.node.item.field_period
     - field.field.node.item.field_photo
     - node.type.item
@@ -27,8 +29,10 @@ content:
     weight: 0
     region: content
 hidden:
+  field_blurb: true
   field_collection: true
   field_country_of_origin: true
+  field_credit: true
   field_period: true
   field_photo: true
   links: true

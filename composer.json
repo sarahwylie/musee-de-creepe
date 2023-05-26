@@ -21,12 +21,13 @@
         "pantheon-systems/drupal-integrations": "^10",
         "cweagans/composer-patches": "^1.7",
         "drush/drush": "^11 || ^12",
-        "drupal/admin_toolbar": "^3.3",
+        "drupal/admin_toolbar": "^3.4",
         "drupal/pathauto": "^1.11",
         "drupal/redirect_page_by_role": "^3.2",
         "drupal/select_registration_roles": "^2.0@beta",
         "drupal/multiple_registration": "^3.2",
-        "drupal/cleantalk": "^9.2"
+        "drupal/cleantalk": "^9.2",
+        "drupal/google_map_field": "^2.0"
     },
     "require-dev": {
         "drupal/core-dev": "^10",

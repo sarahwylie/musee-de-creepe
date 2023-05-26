@@ -4,14 +4,17 @@ status: true
 dependencies:
   config:
     - field.field.node.item.body
+    - field.field.node.item.field_blurb
     - field.field.node.item.field_collection
     - field.field.node.item.field_country_of_origin
+    - field.field.node.item.field_credit
     - field.field.node.item.field_period
     - field.field.node.item.field_photo
     - image.style.thumbnail
     - node.type.item
   module:
     - image
+    - link
     - path
     - text
 id: node.item.default
@@ -35,6 +38,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_blurb:
+    type: text_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 225
+      placeholder: ''
+    third_party_settings: {  }
   field_collection:
     type: options_buttons
     weight: 10
@@ -49,7 +60,15 @@ content:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
-      placeholder: ''
+      placeholder: 'United States of America'
+    third_party_settings: {  }
+  field_credit:
+    type: link_default
+    weight: 26
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   field_period:
     type: string_textfield

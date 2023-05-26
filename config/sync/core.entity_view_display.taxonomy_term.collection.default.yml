@@ -8,11 +8,8 @@ dependencies:
     - field.field.taxonomy_term.collection.field_year_acquired
     - image.style.thumbnail
     - taxonomy.vocabulary.collection
-    - views.view.collections_view
-  content:
-    - 'block_content:basic:7b337aa7-b37c-46db-8376-b3ba76da40f7'
+    - views.view.item_content_block
   module:
-    - block_content
     - image
     - layout_builder
     - layout_discovery
@@ -117,37 +114,22 @@ third_party_settings:
             additional: {  }
         third_party_settings: {  }
       -
-        layout_id: layout_twocol_section
+        layout_id: layout_onecol
         layout_settings:
-          label: 'Collection items'
+          label: 'Collection Items'
           context_mapping: {  }
-          column_widths: 50-50
         components:
-          c839f9c2-129d-4cd5-9a94-8c9c9e6a59cb:
-            uuid: c839f9c2-129d-4cd5-9a94-8c9c9e6a59cb
-            region: first
+          85ee5bf7-ea70-49a0-8e14-3c91907394c4:
+            uuid: 85ee5bf7-ea70-49a0-8e14-3c91907394c4
+            region: content
             configuration:
-              id: 'views_block:collections_view-block_1'
+              id: 'views_block:item_content_block-block_1'
               label: ''
-              label_display: '0'
+              label_display: visible
               provider: views
               context_mapping: {  }
               views_label: ''
               items_per_page: none
-            weight: 0
-            additional: {  }
-          e2483088-2945-4a5d-8eaa-161daf8c7129:
-            uuid: e2483088-2945-4a5d-8eaa-161daf8c7129
-            region: second
-            configuration:
-              id: 'block_content:7b337aa7-b37c-46db-8376-b3ba76da40f7'
-              label: 'Collection Items'
-              label_display: visible
-              provider: block_content
-              status: true
-              info: ''
-              view_mode: full
-              context_mapping: {  }
             weight: 0
             additional: {  }
         third_party_settings: {  }

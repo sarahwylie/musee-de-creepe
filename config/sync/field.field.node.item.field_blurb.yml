@@ -1,0 +1,21 @@
+uuid: 2eeadba5-5839-4228-b5c9-ce1b41dee1f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_blurb
+    - node.type.item
+  module:
+    - text
+id: node.item.field_blurb
+field_name: field_blurb
+entity_type: node
+bundle: item
+label: Blurb
+description: 'Give a short description of this item, to be shown on its Collection page.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

@@ -6,16 +6,62 @@ dependencies:
     - field.field.taxonomy_term.country_of_origin.field_continent
     - taxonomy.vocabulary.country_of_origin
   module:
+    - layout_builder
+    - layout_discovery
     - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          8f071efb-accf-47a0-a3ad-cf75262081bf:
+            uuid: 8f071efb-accf-47a0-a3ad-cf75262081bf
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:country_of_origin:description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_trimmed
+                label: hidden
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          317e1800-993f-47c7-af0b-5d0317037ca6:
+            uuid: 317e1800-993f-47c7-af0b-5d0317037ca6
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:country_of_origin:field_continent'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
 id: taxonomy_term.country_of_origin.default
 targetEntityType: taxonomy_term
 bundle: country_of_origin
 mode: default
 content:
   description:
-    type: text_default
+    type: text_trimmed
     label: hidden
-    settings: {  }
+    settings:
+      trim_length: 600
     third_party_settings: {  }
     weight: 0
     region: content
