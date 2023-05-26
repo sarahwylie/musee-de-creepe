@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4cf147f1c8e5c07ccb5d46453f5f417e",
+    "content-hash": "5b3a2ae5c6d3396c20e930f113feee57",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1222,6 +1222,88 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
+            }
+        },
+        {
+            "name": "drupal/cleantalk",
+            "version": "9.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/cleantalk.git",
+                "reference": "9.2.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/cleantalk-9.2.3.zip",
+                "reference": "9.2.3",
+                "shasum": "75a59c9feb7568034404788933c863700c706361"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10"
+            },
+            "require-dev": {
+                "cleantalk/antispam": "*",
+                "cleantalk/firewall": "*",
+                "cleantalk/storage-handler": "*",
+                "drupal/coder": "*",
+                "phpcompatibility/php-compatibility": "^9.3",
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "3.*",
+                "vimeo/psalm": "^4.8",
+                "yoast/phpunit-polyfills": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "9.2.3",
+                    "datestamp": "1676962298",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit --configuration tests/phpunit.xml",
+                    "vendor/bin/phpcs --config-set installed_paths vendor/phpcompatibility/php-compatibility,vendor/drupal/coder/coder_sniffer,vendor/slevomat/coding-standard/SlevomatCodingStandard",
+                    "vendor/bin/phpcs --standard=tests/.phpcs.xml",
+                    "vendor/bin/psalm --no-cache --config=psalm.xml"
+                ]
+            },
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "CleanTalk inc.",
+                    "homepage": "https://www.drupal.org/user/3597814"
+                },
+                {
+                    "name": "Artem Anoshin",
+                    "homepage": "https://www.drupal.org/user/3685095"
+                },
+                {
+                    "name": "Glomberg",
+                    "homepage": "https://www.drupal.org/user/3624869"
+                },
+                {
+                    "name": "SergeyFrolenko",
+                    "homepage": "https://www.drupal.org/user/3749589"
+                },
+                {
+                    "name": "znaeff",
+                    "homepage": "https://www.drupal.org/user/2727147"
+                }
+            ],
+            "description": "Cloud antispam solution without captcha.",
+            "homepage": "https://cleantalk.org",
+            "support": {
+                "source": "https://git.drupalcode.org/project/cleantalk",
+                "issues": "https://cleantalk.org/my/suport",
+                "support_forum": "https://community.cleantalk.org/viewforum.php?f=31&sid=7b6d4323aa6e39b1e0db7ee06a1d71e4",
+                "faq": "https://cleantalk.org/help"
             }
         },
         {
